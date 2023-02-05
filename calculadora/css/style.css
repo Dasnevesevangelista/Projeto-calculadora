@@ -1,0 +1,132 @@
+@charset 'utf-08';
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --font-result: 'Jost', sans-serif;
+  --colorBody: #0e0e0ea9;
+  --colorContainer: #000;
+  --colorContent: #fff;
+  --colorBtn-01: #333333; 
+  --colorBtn-02: #a9a9a9; 
+  --colorBtn-03: #e09100; 
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colorBody);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 330px;
+  height: 530px;
+  background-color: var(--colorContainer);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgb(133, 133, 133);
+}
+
+#input{
+  width: 310px;
+  height: 65px;
+  padding: 20px 25px 0 0;
+  font-family: var(--font-result);
+  font-size: 2.5em;
+  font-weight: 200;
+  color: var(--colorContent);
+  text-align: right;
+  background-color: var(--colorBtn-02);
+  border: none;
+  border-radius: 40px;
+}
+
+#input::placeholder{
+  color: white;
+}
+
+textarea:focus, input:focus, select:focus {
+  outline: 0;
+}
+
+.grid-btn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 40px;
+  grid-template-areas: 
+  'btn1 btn2 btn3 btn4'
+  'btn5 btn6 btn7 btn8'
+  'btn9 btn10 btn11 btn12'
+  'btn13 btn14 btn15 btn16'
+  'btn17 btn17 btn18 btn19';
+}
+
+.cell, #clear, #btn {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6em;
+  background-color: var(--colorBtn-01);
+  color: var(--colorContent);
+  text-align: center;
+}
+
+#clear:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3){
+  background-color: var(--colorBtn-02);
+  color: black;
+}
+
+.cell:nth-child(4),
+.cell:nth-child(8),
+.cell:nth-child(12),
+.cell:nth-child(16),
+#btn:nth-child(19){
+  background-color: var(--colorBtn-03);
+}
+
+.cell:nth-child(17){
+  width: 150px;
+  height: 70px;
+  text-align: start;
+  padding-left: 25px;
+}
+
+.btn-01{grid-area: btn1;}
+.btn-02{grid-area: btn2;}
+.btn-03{grid-area: btn3;}
+.btn-04{grid-area: btn4;}
+.btn-05{grid-area: btn5;}
+.btn-06{grid-area: btn6;}
+.btn-07{grid-area: btn7;}
+.btn-08{grid-area: btn8;}
+.btn-09{grid-area: btn9;}
+.btn-10{grid-area: btn10;}
+.btn-11{grid-area: btn11;}
+.btn-12{grid-area: btn12;}
+.btn-13{grid-area: btn13;}
+.btn-14{grid-area: btn14;}
+.btn-15{grid-area: btn15;}
+.btn-16{grid-area: btn16;}
+.btn-17{grid-area: btn17;}
+.btn-18{grid-area: btn18;}
+.btn-19{grid-area: btn19;}
+
